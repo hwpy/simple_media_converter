@@ -7,7 +7,7 @@ from PyQt6.QtWidgets import (
 
 from controller.buttons import AppButton
 from controller.sliders import AppSlider
-from model.settings import MainWindowSettings
+from model.settings import MainWindowSettings, SlidersSettings
 from view.window_elements import MainWindowElements
 
 
@@ -23,12 +23,16 @@ class MainWindow(QMainWindow, MainWindowElements):
         app_sliders = AppSlider()
 
         # Слайдеры
-        self.slider_quality = settings.setup_slider(self.slider_quality, 100)
+        self.slider_quality = settings.setup_slider(
+            self.slider_quality, SlidersSettings.slider_quality_dflt.value
+        )
         self.slider_quality.valueChanged.connect(
             partial(app_sliders.update_quality, self)
         )
 
-        self.slider_subsampling = settings.setup_slider(self.slider_subsampling, 0)
+        self.slider_subsampling = settings.setup_slider(
+            self.slider_subsampling, SlidersSettings.slider_subsampling_dflt.value
+        )
         self.slider_subsampling.valueChanged.connect(
             partial(app_sliders.update_subsampling, self)
         )

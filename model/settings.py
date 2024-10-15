@@ -35,3 +35,8 @@ class FileListSettings(Enum):
     height: int = 20
     xpadd: int = 20
     ypadd: int = 20
+
+
+class SlidersSettings(Enum):
+    slider_quality_dflt: int = 100
+    slider_subsampling_dflt: int = 0
