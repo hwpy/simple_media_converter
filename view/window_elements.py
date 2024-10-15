@@ -1,6 +1,6 @@
-
 from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import (
+    QLabel,
     QListWidget,
     QMessageBox,
     QPushButton,
@@ -9,26 +9,30 @@ from PyQt6.QtWidgets import (
     QWidget,
 )
 
-from model.main_window import FileListSettings
+from model.settings import FileListSettings
 
 
 class MainWindowElements:
     def __init__(self) -> None:
-
         self.file_list = QListWidget()
         self.file_list.setGeometry(
             FileListSettings.xpadd.value,
             FileListSettings.ypadd.value,
             FileListSettings.width.value,
-            FileListSettings.height.value
+            FileListSettings.height.value,
         )
 
         self.msg_converted = QMessageBox()
 
+        self.main_label = QLabel("HEIC -> JPG")
+
         self.button_convert = QPushButton("Конвертировать")
         self.button_open = QPushButton("Открыть файл")
 
+        self.slider_quality_label = QLabel("Качество: ", self)
         self.slider_quality = QSlider(Qt.Orientation.Horizontal, self)
+
+        self.slider_subsampling_label = QLabel("Цветовая субдискретизация: ", self)
         self.slider_subsampling = QSlider(Qt.Orientation.Horizontal, self)
 
         self.layout = QVBoxLayout()
