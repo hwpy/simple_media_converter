@@ -1,9 +1,7 @@
 from enum import Enum
 
 from PyQt6 import QtGui
-from PyQt6.QtWidgets import (
-    QMainWindow,
-)
+from PyQt6.QtWidgets import QMainWindow, QSlider
 
 
 class MainWindowSettings:
@@ -21,6 +19,16 @@ class MainWindowSettings:
         window.setWindowIcon(QtGui.QIcon("media/app_icon.png"))
         # Установка позиции и размеров окна
         window.setGeometry(self.xpadd, self.ypadd, self.width, self.height)
+
+    @staticmethod
+    def setup_slider(slider: QSlider, default_value: int = 100):
+        slider.setRange(0, 100)
+        slider.setValue(default_value)
+        slider.setSingleStep(5)
+        slider.setPageStep(10)
+        slider.setTickPosition(QSlider.TickPosition.TicksBelow)
+        return slider
+
 
 class FileListSettings(Enum):
     width: int = 400

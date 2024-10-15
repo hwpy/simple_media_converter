@@ -11,7 +11,8 @@ class HEIC_2_JPG:
     def convert_file(
         self,
         heic_path: str,
-        jpeg_path: str | None = None
+        jpeg_path: str | None = None,
+        **kwargs
     ) -> str:
         # Зарегистрировать Pillow для формата HEIF
         pillow_heif.register_heif_opener()
@@ -30,7 +31,7 @@ class HEIC_2_JPG:
                 os.makedirs(jpg_dir)
 
         img = Image.open(heic_path)
-        img.save(jpeg_path, format="JPEG", quality=100, subsampling=0)
+        img.save(jpeg_path, format="JPEG", **kwargs)
         return jpeg_path
 
 if __name__ == "__main__":
