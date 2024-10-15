@@ -1,0 +1,5 @@
+pillow==10.4.0
+pillow_heif==0.18.0
+PyQt6==6.7.1
+PyQt6-Qt6==6.7.3
+PyQt6_sip==13.8.0
