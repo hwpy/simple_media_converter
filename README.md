@@ -9,4 +9,4 @@
 Смотри TODO.md
 
 ## Сборка с помощью pyinstaller:
-* pyinstaller --windowed --icon=media/app_icon.png simple_media_converter.py
+* pyinstaller --windowed --name="Simple media converter" --icon="media/app_icon.icns" simple_media_converter.py
