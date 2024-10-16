@@ -1,7 +1,7 @@
 from enum import Enum
 
-from PyQt6 import QtGui
-from PyQt6.QtWidgets import QMainWindow, QSlider
+from PyQt5 import QtGui
+from PyQt5.QtWidgets import QMainWindow, QSlider
 
 
 class MainWindowSettings:

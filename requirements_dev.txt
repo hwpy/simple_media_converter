@@ -2,9 +2,9 @@ altgraph==0.17.4
 macholib==1.16.3
 packaging==24.1
 pillow==10.4.0
-pillow_heif==0.18.0
-pyinstaller==6.10.0
-pyinstaller-hooks-contrib==2024.8
-PyQt6==6.7.1
-PyQt6-Qt6==6.7.3
-PyQt6_sip==13.8.0
+pillow-heif==0.13.1
+pyinstaller==6.11.0
+pyinstaller-hooks-contrib==2024.9
+PyQt5==5.15.5
+PyQt5-Qt5==5.15.15
+PyQt5_sip==12.15.0

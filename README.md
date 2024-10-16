@@ -1,4 +1,4 @@
-# simple_converter
+# simple_media_converter
 Простой файловый конвертер
 
 ## На данный момент поддерживается
@@ -9,4 +9,4 @@
 Смотри TODO.md
 
 ## Сборка с помощью pyinstaller:
-* pyinstaller --windowed --icon=media/app_icon.png simple_converter.py
+* pyinstaller --windowed --icon=media/app_icon.png simple_media_converter.py
