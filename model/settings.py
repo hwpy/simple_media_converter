@@ -14,7 +14,7 @@ class MainWindowSettings:
         self.ypadd = 80
 
         # Заголовок
-        window.setWindowTitle("Простой конвертер")
+        window.setWindowTitle("Простой медиа конвертер")
         # Иконка
         window.setWindowIcon(QtGui.QIcon("media/app_icon.png"))
         # Установка позиции и размеров окна
