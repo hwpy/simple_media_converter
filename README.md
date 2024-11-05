@@ -1,6 +1,8 @@
 # simple_media_converter
 Простой файловый конвертер
 
+![Alt text](media/screenshot.png?raw=true "Optional Title")
+
 ## На данный момент поддерживается
 1. Конвертация изображений:
     * heic -> jpg
